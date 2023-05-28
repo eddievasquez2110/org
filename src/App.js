@@ -92,22 +92,29 @@ function App() {
     actualizadoColaboradores([...colaboradores, colaborador])
   }
 
+  //Eliminar Colaborador
+  const eliminarColaborador = () => {
+    console.log("Eliminar Colaborador")
+  }
 
   return (
     <div>
       <Header />
       {/* {mostrarFormulario === true ? <Formulario /> : <div></div>} //ternario */}
       {/* igual que ternario */}
-      {mostrarFormulario && <Formulario equipos={equipos.map((equipo) => equipo.titulo)}
-       registrarColaborador={registrarColaborador}
+      {mostrarFormulario && <Formulario 
+        equipos={equipos.map((equipo) => equipo.titulo)}
+        registrarColaborador={registrarColaborador}
        /> }
 
       <MiOrg cambiarMostrar={cambiarMostrar}/>
+
       {
         equipos.map(equipo => <Equipo 
           datos={equipo} 
           key={equipo.titulo}
           colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
+          eliminarColaborador={eliminarColaborador}
           /> )
       }
       <Footer></Footer>
