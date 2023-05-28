@@ -9,7 +9,7 @@ const Equipo = (props) => {
     const { colaboradores, eliminarColaborador, actualizarColor} = props
 
     const estiloSeccion = {
-        backgroundColor: hexToRgba(colorPrimario, 0.6)
+        backgroundColor: hexToRgba(colorPrimario, 0.4)
     }
 
     const estiloTitulo = {
@@ -17,7 +17,7 @@ const Equipo = (props) => {
     }
 
     const estiloInput = {
-        borderColor: hexToRgba(colorPrimario, 0.6),
+        borderColor: hexToRgba(colorPrimario, 0.4),
         backgroundColor: hexToRgba(colorPrimario, 0.10)
     }
 
