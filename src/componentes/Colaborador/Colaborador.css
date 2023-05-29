@@ -53,3 +53,10 @@
 .eliminar:hover {
     color: rgb(174, 23, 23);
 }
+
+.like{
+    cursor: pointer;
+    position: absolute;
+    left: 125px;
+    top: 175px;
+}
