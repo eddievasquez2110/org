@@ -1,5 +1,7 @@
 import "./Colaborador.css"
+import hexToRgba from 'hex-to-rgba'
 import {AiFillCloseCircle, AiOutlineHeart, AiFillHeart} from "react-icons/ai"
+
 
 const Colaborador = (props) => {
     const {nombre, puesto, foto, equipo, id, fav} = props.datos

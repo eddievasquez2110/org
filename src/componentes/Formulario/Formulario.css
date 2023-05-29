@@ -17,5 +17,6 @@
 .formulario h2{
     font-size: 32px;
     font-weight: 400;
-    color: #212121;
+    color: #6278f79a;
+    text-shadow: 2px 1px 2px rgba(128, 128, 128, 0.234);
 }
