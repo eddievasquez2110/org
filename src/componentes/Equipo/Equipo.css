@@ -13,6 +13,7 @@
     right: 50px;
     cursor: pointer;
     border-color: #212121;
+    border: 2px solid;
 }
 
 .equipo h3{

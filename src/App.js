@@ -1,5 +1,6 @@
 
 import { useState } from 'react'
+import { v4 as uuid } from 'uuid'
 import './App.css'
 import Header from "./componentes/Header/Header"
 import Formulario from './componentes/Formulario/Formulario'
@@ -11,31 +12,36 @@ import Footer from './componentes/Footer'
 function App() {
 
   const [mostrarFormulario, actualizarMostrar] = useState(false)
-  const [colaboradores, actualizadoColaboradores] = useState([{
+  const [colaboradores, actualizarColaboradores] = useState([{
+    id: uuid(),
     equipo: "Front End",
     foto: "https://github.com/harlandlohora.png",
     nombre: "Harland Lohora",
     puesto: "Instructor"
   },
   {
+    id: uuid(),
     equipo: "Programación",
     foto: "https://github.com/genesysaluralatam.png",
     nombre: "Genesys Rondón",
     puesto: "Desarrolladora de software e instructora"
   },
   {
+    id: uuid(),
     equipo: "UX y Diseño",
     foto: "https://github.com/JeanmarieAluraLatam.png",
     nombre: "Jeanmarie Quijada",
     puesto: "Instructora en Alura Latam"
   },
   {
+    id: uuid(),
     equipo: "Programación",
     foto: "https://github.com/christianpva.png",
     nombre: "Christian Velasco",
     puesto: "Head de Alura e Instructor"
   },
   {
+    id: uuid(),
     equipo: "Innovación y Gestión",
     foto: "https://github.com/JoseDarioGonzalezCha.png",
     nombre: "Jose Gonzalez",
@@ -89,19 +95,21 @@ function App() {
   const registrarColaborador = (colaborador) => {
     console.log("Nuevo colaborador", colaborador)
     //Spread operator
-    actualizadoColaboradores([...colaboradores, colaborador])
+    actualizarColaboradores([...colaboradores, colaborador])
   }
 
   //Eliminar Colaborador
-  const eliminarColaborador = () => {
-    console.log("Eliminar Colaborador")
+  const eliminarColaborador = (id) => {
+    console.log("Eliminar Colaborador", id)
+    const nuevosColaboradores = colaboradores.filter((colaborador) => colaborador.id !== id)
+    actualizarColaboradores(nuevosColaboradores)
   }
 
   //Actualizar color de equipo
-  const actualizarColor = (color, titulo) => {
-    console.log("actualizar: ",color, titulo)
+  const actualizarColor = (color, id) => {
+    console.log("actualizar: ",color, id)
     const equiposActualizados = equipos.map((equipo) => {
-      if(equipo.titulo === titulo) {
+      if(equipo.id === id) {
         equipo.colorPrimario = color
       }
       return equipo
