@@ -3,6 +3,19 @@
     margin-bottom: 24px;
     position: relative;
     padding-top: 10px;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .colaborador .encabezado {

@@ -64,7 +64,7 @@ const Formulario = (props) => {
                 actualizarEquipo={actualizarEquipo}
                 equipos={props.equipos}
             />
-            <Boton>Crear</Boton>
+            <Boton id={`/${titulo}`}>Crear</Boton>
         </form>
         <form onSubmit={manejarNuevoEquipo}>
             <h2>Rellena el formulario para crear el equipo.</h2>
