@@ -2,7 +2,7 @@ import "./Footer.css"
 import {VscGithub} from "react-icons/vsc"
 
 const Footer = () => {
-    return <footer className="footer" style={{backgroundImage:"url(./img/Footer.png)"}}>
+    return <footer className="footer">
         <div className="redes">
             <a href='https://github.com/eddievasquez2110' target="_blank"> 
                 <VscGithub className="icon"/>
