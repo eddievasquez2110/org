@@ -107,7 +107,7 @@ function App() {
   const registrarColaborador = (colaborador) => {
     console.log("Nuevo colaborador", colaborador)
     //Spread operator
-    actualizarColaboradores([...colaboradores, colaborador])
+    actualizarColaboradores([...colaboradores, {...colaborador, id: uuid()}])
   }
 
   //Eliminar Colaborador
